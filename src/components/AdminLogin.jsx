@@ -28,18 +28,18 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="admin-login">
+    <div className="unique-admin-login">
       <h2>Admin Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input type="text" name="username" value={credentials.username} onChange={handleChange} required />
+        <div className="unique-form-group">
+          <label className="unique-label">Username:</label>
+          <input className="unique-input" type="text" name="username" value={credentials.username} onChange={handleChange} required />
         </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
+        <div className="unique-form-group">
+          <label className="unique-label">Password:</label>
+          <input className="unique-input" type="password" name="password" value={credentials.password} onChange={handleChange} required />
         </div>
-        <button type="submit">Login</button>
+        <button className="unique-button" type="submit">Login</button>
       </form>
     </div>
   );

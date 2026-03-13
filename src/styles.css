@@ -14,7 +14,7 @@ body {
 }
 
 /* ===== Navbar ===== */
-.navbar {
+.unique-navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@ body {
   z-index: 1000;
 }
 
-.navbar-container {
+.unique-navbar-container {
   max-width: 1200px;
   margin: auto;
   padding: 0 25px;
@@ -34,25 +34,25 @@ body {
   align-items: center;
 }
 
-.navbar-logo {
+.unique-navbar-logo {
   color: white;
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
 }
 
-.navbar-menu {
+.unique-navbar-menu {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
 
-.navbar-menu li {
+.unique-navbar-menu li {
   margin-left: 20px;
 }
 
-.navbar-menu a {
+.unique-navbar-menu a {
   color: white;
   text-decoration: none;
   padding: 8px 14px;
@@ -60,16 +60,16 @@ body {
   transition: 0.3s;
 }
 
-.navbar-menu a:hover {
+.unique-navbar-menu a:hover {
   background: rgba(255,255,255,0.25);
 }
 
 /* ===== Card Style ===== */
-.registration-form,
-.admin-login,
-.admin-dashboard,
-.home,
-.about {
+.unique-registration-form,
+.unique-admin-login,
+.unique-admin-dashboard,
+.unique-home,
+.unique-about {
   width: 90%;
   max-width: 480px;
   margin-top: 80px;
@@ -86,18 +86,18 @@ body {
 }
 
 /* ===== Form Fields ===== */
-form div {
+.unique-form-group {
   margin-bottom: 15px;
 }
 
-label {
+.unique-label {
   font-weight: 600;
   margin-bottom: 6px;
   display: block;
 }
 
-input,
-select {
+.unique-input,
+.unique-select {
   width: 100%;
   padding: 12px;
   border-radius: 8px;
@@ -107,7 +107,7 @@ select {
 }
 
 /* ===== Buttons ===== */
-button {
+.unique-button {
   width: 100%;
   padding: 12px;
   border-radius: 25px;
@@ -120,25 +120,30 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+.unique-button:hover {
   transform: scale(1.03);
   background: #f1f1f1;
 }
 
 /* ===== Tabs ===== */
-.tabs {
+.unique-tabs {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.tabs button {
+.unique-tabs button {
   width: auto;
   margin: 5px;
   padding: 8px 18px;
 }
 
+.unique-tabs button.unique-active {
+  background: #764ba2;
+  color: white;
+}
+
 /* ===== Tables ===== */
-table {
+.unique-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 50px;
@@ -147,17 +152,18 @@ table {
   overflow: hidden;
 }
 
-th, td {
-  padding: 0px;
+.unique-table th,
+.unique-table td {
+  padding: 8px 12px;
   text-align: left;
 }
 
-th {
+.unique-table th {
   background: rgba(0,0,0,0.2);
 }
 
 /* ===== Home Links ===== */
-.home-links a {
+.unique-home-links a {
   display: inline-block;
   margin: 10px;
   padding: 10px 18px;
@@ -169,31 +175,31 @@ th {
   transition: 0.3s;
 }
 
-.home-links a:hover {
+.unique-home-links a:hover {
   transform: translateY(-2px);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
-  .navbar-container {
+  .unique-navbar-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .navbar-menu {
+  .unique-navbar-menu {
     flex-direction: column;
     width: 100%;
   }
 
-  .navbar-menu li {
+  .unique-navbar-menu li {
     margin: 8px 0;
   }
 
-  .registration-form,
-  .admin-login,
-  .admin-dashboard,
-  .home,
-  .about {
+  .unique-registration-form,
+  .unique-admin-login,
+  .unique-admin-dashboard,
+  .unique-home,
+  .unique-about {
     margin: 100px 10px 20px;
   }
 }

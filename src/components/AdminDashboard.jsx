@@ -64,49 +64,49 @@ const AdminDashboard = () => {
   };
 
   return (
-    <div className="admin-dashboard">
+    <div className="unique-admin-dashboard">
       <h2>Admin Dashboard</h2>
-      <button onClick={handleLogout} style={{ float: 'right' }}>Logout</button>
-      <div className="tabs">
-        <button className={activeTab === 'users' ? 'active' : ''} onClick={() => setActiveTab('users')}>Registered Users</button>
-        <button className={activeTab === 'api' ? 'active' : ''} onClick={() => setActiveTab('api')}>API Data</button>
+      <button className="unique-button" onClick={handleLogout} style={{ float: 'right' }}>Logout</button>
+      <div className="unique-tabs">
+        <button className={activeTab === 'users' ? 'unique-active' : ''} onClick={() => setActiveTab('users')}>Registered Users</button>
+        <button className={activeTab === 'api' ? 'unique-active' : ''} onClick={() => setActiveTab('api')}>API Data</button>
       </div>
       {activeTab === 'users' && (
         <div>
           <h3>Registered Users</h3>
-          <button onClick={() => setShowAddForm(!showAddForm)}>Add User</button>
+          <button className="unique-button" onClick={() => setShowAddForm(!showAddForm)}>Add User</button>
           {showAddForm && (
             <form onSubmit={handleAddUser} style={{ marginTop: '20px' }}>
-              <div>
-                <label>Name:</label>
-                <input type="text" name="name" value={newUser.name} onChange={handleInputChange} required />
+              <div className="unique-form-group">
+                <label className="unique-label">Name:</label>
+                <input className="unique-input" type="text" name="name" value={newUser.name} onChange={handleInputChange} required />
               </div>
-              <div>
-                <label>Gender:</label>
-                <select name="gender" value={newUser.gender} onChange={handleInputChange} required>
+              <div className="unique-form-group">
+                <label className="unique-label">Gender:</label>
+                <select className="unique-select" name="gender" value={newUser.gender} onChange={handleInputChange} required>
                   <option value="">Select</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
-              <div>
-                <label>Email:</label>
-                <input type="email" name="email" value={newUser.email} onChange={handleInputChange} required />
+              <div className="unique-form-group">
+                <label className="unique-label">Email:</label>
+                <input className="unique-input" type="email" name="email" value={newUser.email} onChange={handleInputChange} required />
               </div>
-              <div>
-                <label>Password:</label>
-                <input type="password" name="password" value={newUser.password} onChange={handleInputChange} required />
+              <div className="unique-form-group">
+                <label className="unique-label">Password:</label>
+                <input className="unique-input" type="password" name="password" value={newUser.password} onChange={handleInputChange} required />
               </div>
-              <div>
-                <label>Contact No:</label>
-                <input type="tel" name="contact" value={newUser.contact} onChange={handleInputChange} required />
+              <div className="unique-form-group">
+                <label className="unique-label">Contact No:</label>
+                <input className="unique-input" type="tel" name="contact" value={newUser.contact} onChange={handleInputChange} required />
               </div>
-              <button type="submit">Add User</button>
-              <button type="button" onClick={() => setShowAddForm(false)}>Cancel</button>
+              <button className="unique-button" type="submit">Add User</button>
+              <button className="unique-button" type="button" onClick={() => setShowAddForm(false)}>Cancel</button>
             </form>
           )}
-          <table>
+          <table className="unique-table">
             <thead>
               <tr>
                 <th>Name</th>
@@ -123,7 +123,7 @@ const AdminDashboard = () => {
                   <td>{user.gender}</td>
                   <td>{user.email}</td>
                   <td>{user.contact}</td>
-                  <td><button onClick={() => handleRemoveUser(index)}>Remove</button></td>
+                  <td><button className="unique-button" onClick={() => handleRemoveUser(index)}>Remove</button></td>
                 </tr>
               ))}
             </tbody>
@@ -133,13 +133,14 @@ const AdminDashboard = () => {
       {activeTab === 'api' && (
         <div>
           <h3>API Data (Products)</h3>
-          <table>
+          <table className="unique-table">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Title</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Date</th>
               </tr>
             </thead>
             <tbody>
@@ -149,13 +150,14 @@ const AdminDashboard = () => {
                   <td>{product.title}</td>
                   <td>${product.price}</td>
                   <td>{product.description}</td>
+                  <td>{new Date().toLocaleDateString()}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       )}
-      <button onClick={handleLogout}>Logout</button>
+      <button className="unique-button" onClick={handleLogout}>Logout</button>
     </div>
   );
 };
